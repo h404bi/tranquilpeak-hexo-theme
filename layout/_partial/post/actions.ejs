@@ -25,18 +25,13 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action">
-            <a class="post-action-btn btn btn--default" target="new" href="<%= 'https://plus.google.com/share?url=' + post.permalink %>">
-                <i class="fa fa-google-plus"></i>
+            <a class="post-action-btn btn btn--default" target="new" href="<%= 'http://qr.liantu.com/api.php?text=' + post.permalink %>">
+                <i class="fa fa-weixin"></i>
             </a>
         </li>
         <li class="post-action">
-            <a class="post-action-btn btn btn--default" target="new" href="<%= 'https://www.facebook.com/sharer/sharer.php?u=' + post.permalink %>">
-                <i class="fa fa-facebook-official"></i>
-            </a>
-        </li>
-        <li class="post-action">
-            <a class="post-action-btn btn btn--default" target="new" href="<%= 'https://twitter.com/intent/tweet?text=' + post.permalink %>">
-                <i class="fa fa-twitter"></i>
+            <a class="post-action-btn btn btn--default" target="new" href="<%= 'http://service.weibo.com/share/share.php?url=' + post.permalink %>">
+                <i class="fa fa-weibo"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
