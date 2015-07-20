@@ -1,18 +1,13 @@
 <div id="share-options-bar" class="share-options-bar" data-behavior="<%= theme.sidebar_behavior %>">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="<%= 'https://plus.google.com/share?url=' + post.permalink %>">
-                <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
+            <a class="share-option-btn" target="new" href="<%= 'http://qr.liantu.com/api.php?text=' + post.permalink %>">
+                <i class="fa fa-weixin"></i><span class="">Share on WeChat</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="<%= 'https://www.facebook.com/sharer/sharer.php?u=' + post.permalink %>">
-                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
-            </a>
-        </li>
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="<%= 'https://twitter.com/intent/tweet?text=' + post.permalink %>">
-                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+            <a class="share-option-btn" target="new" href="<%= 'http://service.weibo.com/share/share.php?url=' + post.permalink %>">
+                <i class="fa fa-weibo"></i><span>Share on Weibo</span>
             </a>
         </li>
     </ul>
