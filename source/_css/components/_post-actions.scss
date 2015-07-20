@@ -45,7 +45,7 @@
         li.post-action {
             float: right;
 
-            &:nth-child(n + 3) {
+            &:nth-child(n + 2) {
                 .post-action-btn {
                     margin-right: 15px;
                 }
@@ -73,11 +73,11 @@
     .post-actions-wrap {
         ul.post-action-nav {
             // Best width for responsive post's navigation panel on very small screen
-            width: 35%;
+            width: 40%;
         }
         ul.post-action-share {
             // Best width for responsive post's share panel on very small screen
-            width: 65%;
+            width: 60%;
         }
     }
 }
