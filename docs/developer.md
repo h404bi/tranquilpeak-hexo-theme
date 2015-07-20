@@ -6,6 +6,8 @@ If you want to report a bug or ask a question, [create an issue](https://github.
 
 ## Summary ##
 
+- [General](#general)
+- [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Code structure](#code-structure)
@@ -23,7 +25,44 @@ If you want to report a bug or ask a question, [create an issue](https://github.
         * [Config tasks](#config-tasks)
         * [Register tasks](#register-tasks)
 - [Running](#running)
- 
+
+## General ##
+
+- **Author** : Louis Barranqueiro
+- **Version** : 1.2.0  
+- **Compatibility** : Hexo 3.0.x
+
+## Features ##
+
+**General features :**  
+- Fully responsive  
+- Optimized for tablets & mobiles  
+- Configurable menu of the sidebar  
+- Pages to filter tags, categories and archives  
+- Background cover image  
+- Beautiful about page  
+- Support Open Graph protocol  
+  
+  
+**Posts features :**  
+- Thumbnail image  
+- Cover image  
+- Responsive videos & images  
+- Sharing options  
+- Navigation menu  
+- GitHub theme for code highlighting  
+- Image gallery  
+- Table of contents  
+  
+  
+**Integrated services :**  
+- Disqus  
+- Google analytics  
+- Gravatar  
+- Swiftype  
+- Facebook Insights  
+  
+  
 ## Requirements ##
 
 1. **Node** : v0.10.35 or higher. Download [Node](https://nodejs.org/download/)
@@ -56,6 +95,7 @@ tranquilpeak-hexo-theme
 │   │   │   ├── gallery.ejs
 │   │   │   ├── header.ejs
 │   │   │   ├── meta.ejs
+│   │   │   ├── share-options.ejs
 │   │   │   └── tag.ejs
 │   │   ├── about.ejs
 │   │   ├── archive-post.ejs
@@ -85,7 +125,7 @@ tranquilpeak-hexo-theme
 │   │   ├── base
 │   │   │   ├── _base.scss
 │   │   ├── components
-│   │   │   ├── archives.scss
+│   │   │   ├── _archives.scss
 │   │   │   ├── _box.scss
 │   │   │   ├── _button.scss
 │   │   │   ├── _category.scss
@@ -101,6 +141,7 @@ tranquilpeak-hexo-theme
 │   │   │   ├── _post-actions.scss
 │   │   │   ├── _post.scss
 │   │   │   ├── _pullquote.scss
+│   │   │   ├── _share-options.scss
 │   │   │   ├── _tag.scss
 │   │   │   ├── _text.scss
 │   │   │   ├── _tooltip.scss
@@ -108,6 +149,7 @@ tranquilpeak-hexo-theme
 │   │   ├── layout
 │   │   │   ├── _about.scss
 │   │   │   ├── _blog.scss
+│   │   │   ├── _bottom-bar.scss
 │   │   │   ├── _cover.scss
 │   │   │   ├── _footer.scss
 │   │   │   ├── _header.scss
@@ -115,11 +157,16 @@ tranquilpeak-hexo-theme
 │   │   │   └── _sidebar.scss
 │   │   ├── utils
 │   │   │   ├── mixins
+│   │   │   │   ├── _bottom-bar.scss
 │   │   │   │   ├── _button.scss
 │   │   │   │   ├── _category.scss
 │   │   │   │   ├── _form.scss
+│   │   │   │   ├── _header.scss
+│   │   │   │   ├── _main.scss
 │   │   │   │   ├── _opacity.scss
 │   │   │   │   ├── _prefix.scss
+│   │   │   │   └── _share-options-bar.scss
+│   │   │   │   └── _sidebar.scss
 │   │   │   │   └── _tag.scss
 │   │   │   ├── _font.scss
 │   │   │   └── _variables.scss
@@ -127,7 +174,7 @@ tranquilpeak-hexo-theme
 │   ├── _fonts 
 │   │   └── .gitkeep
 │   ├── _images
-│   │   └── cover.png
+│   │   └── cover.jpg
 │   └── _js
 │   │   ├── about.js
 │   │   ├── archives-filter.js
@@ -136,6 +183,7 @@ tranquilpeak-hexo-theme
 │   │   ├── header.js
 │   │   ├── image-gallery.js
 │   │   ├── post-bottom-bar.js
+│   │   ├── share-options.js
 │   │   ├── sidebar.js
 │   │   ├── smartresize.js
 │   │   └── tags-filter.scss
@@ -186,6 +234,7 @@ tranquilpeak-hexo-theme
     │   │   ├── gallery.ejs
     │   │   ├── header.ejs
     │   │   ├── meta.ejs
+    │   │   ├── share-options.ejs
     │   │   └── tag.ejs
     │   ├── about.ejs
     │   ├── archive-post.ejs
@@ -225,7 +274,7 @@ tranquilpeak-hexo-theme
     ├── base
     │   ├── _base.scss
     ├── components
-    │   ├── archives.scss
+    │   ├── _archives.scss
     │   ├── _box.scss
     │   ├── _button.scss
     │   ├── _category.scss
@@ -241,6 +290,7 @@ tranquilpeak-hexo-theme
     │   ├── _post-actions.scss
     │   ├── _post.scss
     │   ├── _pullquote.scss
+    │   ├── _share-options.scss
     │   ├── _tag.scss
     │   ├── _text.scss
     │   ├── _tooltip.scss
@@ -248,6 +298,7 @@ tranquilpeak-hexo-theme
     ├── layout
     │   ├── _about.scss
     │   ├── _blog.scss
+    │   ├── _bottom-bar.scss
     │   ├── _cover.scss
     │   ├── _footer.scss
     │   ├── _header.scss
@@ -255,11 +306,16 @@ tranquilpeak-hexo-theme
     │   └── _sidebar.scss
     ├── utils
     │   ├── mixins
+    │   │   ├── _bottom-bar.scss
     │   │   ├── _button.scss
     │   │   ├── _category.scss
     │   │   ├── _form.scss
+    │   │   ├── _header.scss
+    │   │   ├── _main.scss
     │   │   ├── _opacity.scss
     │   │   ├── _prefix.scss
+    │   │   └── _share-options-bar.scss
+    │   │   └── _sidebar.scss
     │   │   └── _tag.scss
     │   ├── _font.scss
     │   └── _variables.scss
@@ -283,7 +339,7 @@ If you have local fonts, place them in this folder and import them in `source/_c
 
 ```
 ├── _images
-    └── cover.png
+    └── cover.jpg
 ```
 
 - **cover.png** : Default background cover of the blog
@@ -301,6 +357,7 @@ Contains all images of the theme.
     ├── header.js
     ├── image-gallery.js
     ├── post-bottom-bar.js
+    ├── share-options.js
     ├── sidebar.js
     ├── smartresize.js
     └── tags-filter.scss
@@ -313,6 +370,7 @@ Contains all images of the theme.
 - **header.js** : Hide the header when the user scrolls down, and show it when he scrolls up
 - **image-gallery.js** : Resize all images of an image-gallery
 - **post-bottom-bar.js** : Hide the post bottom bar when the post footer is visible by the user, and vice versa
+- **share-options.js** : Open and close the share-options bar 
 - **sidebar.js** : Open and close the sidebar by swiping the sidebar and the blog and vice versa
 - **smartresize.js** : Debouncing function from [John Hann](https://github.com/unscriptable)
 - **tags-filter.scss** : Filter posts by using their tags on archives page : `/tags`  

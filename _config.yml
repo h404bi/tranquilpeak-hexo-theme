@@ -8,7 +8,7 @@ image_dir: assets/images
 # Sidebar Configuration
 #    You can add groups of links and links much as you want
 #    You just have to respect the indentation : `groups of links` -> `link` -> `title, link, icon`
-#    Example :
+#    E.g :
 #    -------------
 #       sidebar:                   # DON'T modify this variable name
 #            menu:                 # Name of your groups of links (changeable)
@@ -35,6 +35,12 @@ sidebar:
             title: Archives
             url: /all-archives
             icon: archive
+        search:
+            title: Search
+            url: /#search
+            icon: search
+            # `st-search-show-outputs` classes are used to open swiftype search window
+            class: st-search-show-outputs
         about:
             title: About
             url: /about
@@ -58,25 +64,70 @@ sidebar:
             url: /atom.xml
             icon: rss
 
+# Header configuration
+# The link at the right of the header is customizable
+# You can add a link (as an icon) at the right of the header instead of the author's gravatar image or author's picture.
+# DON'T edit `header`, `right_link`, `url`, `icon` and `class` variable name
+header:
+    right_link:
+        # url: /#search
+        # icon: search
+        # class: st-search-show-outputs
+
 # Author
 author:
     email:
+    # Your biography (Markdown and HTML supported)
     bio: h404bi is hanabi
     job:
     location:
+    # Your profile picture located in folder `source/_images/` (development)
+    # or in `source/assets/images/` (production).
+    # Overwritten by your gravatar image if `gravatar_image` is enabled
     picture: avatar.png
-                # Your profile picture located in folder `source/_images/` (development)
-                # or in `source/assets/images/` (production)
-                # Overwritten by your gravatar image if `gravatar_image` is enabled
+    # Your Twitter username without the @. E.g : `tranquilpeak`
+    twitter:
+    # Your google plus profile id. E.g : `+Tranquilpeak` or `123812884128439`
+    google_plus:
+
 
 # Customization
-gravatar_image: 0                      # Enable gravatar image. Using `author.email` value. (disable: 0, enable: 1). Overwrite `author.picture` everywhere in the blog
-thumbnail_image: 0                     # Display thumbnail image of each post on index pages (disable: 0, enable: 1)
-read_more_message: Continue reading    # Message displayed after the <!-- more --> tag
-go_to_message: Go to the website       # Message displayed after the <!-- more --> tag or after 300 characters for post with link layout
-cover: cover.png                       # Your blog cover picture located in folder `source/_images/` (development) or in `source/assets/images/` (production)
-favicon: favicon.ico                   # Your favicon located in folder `source/_images/` (development) or in `source/assets/images/` (production)
-image_gallery: 1                       # Display an image gallery at the end of a post which have photos variables
+# Define the behavior of the sidebar
+# 1: Display large sidebar on large screen, medium sidebar on medium screen and header bar on small screen
+# and large sidebar is swiped (default)
+# 2: Display medium sidebar on large and medium screen and header bar on small screen and medium sidebar is swiped
+# 3: Display header bar on all screens and large sidebar is swiped
+# 4: Display header bar on all screens and medium sidebar is swiped
+sidebar_behavior: 1
+# Head title displayed at the top of the table of contents.
+toc_title: Table of contents
+# Display thumbnail image of each post on index pages (false: disabled, true: enabled)
+thumbnail_image: false
+# Message displayed after the <!-- more --> comment
+read_more_message: Continue reading
+# Message displayed after the <!-- more --> comment or after 300 characters for post with link layout
+go_to_message: Go to the website
+# Your blog cover picture located in folder `source/_images/` (development) or in `source/assets/images/` (production)
+cover_image: cover.jpg
+# Your favicon located in folder `source/_images/` (development) or in `source/assets/images/` (production)
+favicon: favicon.ico
+# Display an image gallery at the end of a post which have photos variables (false: disabled, true: enabled)
+image_gallery: true
+# Pagination behavior of archive, category and tag pages (false: pagination disabled, true: pagination enabled)
+archive_pagination: true
+category_pagination: true
+tag_pagination: true
 
-# Miscellaneous
-google_analytics:    # Google analystics web property ID : UA-XXXXX-X
+# Integrated services
+# Your Disqus shortname
+disqus_shortname:
+# Your Google analystics web property ID : UA-XXXXX-X
+google_analytics_id:
+# Your Gravatar email. Overwrite `author.picture` everywhere in the blog
+gravatar_email:
+# Your swiftype install key
+swiftype_install_key:
+# Your Facebook user ids used to connect your blog with your facebook user accounts (Facebook Insights). Separate ids with comma. e.g : 9830047,1003342
+fb_admin_ids:
+# Your Facebook app id used to connect your blog with your facebook app account (Facebook Insights). E.g : 9841307
+fb_app_id:
