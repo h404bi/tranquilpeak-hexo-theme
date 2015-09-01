@@ -5,44 +5,45 @@
     }
     // Create title of the page
     var title = '';
+    var title_suffix = ' - ' + config.title;
 
     if (is_home()) {
         title += config.title;
     }
     else if (is_archive()){
-        title += 'All archives';
+        title += __('global.archives');
 
         if (is_month()) {
-            title += ' : ' + page.year + '/' + page.month;
+            title += ': ' + page.year + '/' + page.month;
         }
         else if (is_year()) {
-            title += ' : ' + page.year;
+            title += ': ' + page.year;
         }
 
-        title += ' - ' + config.title;
+        title += title_suffix;
     }
     else if (is_tag()) {
         if (page.tag) {
-            title += 'Tag : ' + page.tag;
+            title += __('global.tag') + ': ' + page.tag;
         }
         else {
-            title += 'All tags';
+            title += __('global.tags');
         }
 
-        title += ' - ' + config.title;
+        title += title_suffix;
     }
     else if (is_category()) {
         if (page.category) {
-            title += 'Category : ' + page.category;
+            title += __('global.category') + ': ' + page.category;
         }
         else {
-            title += 'All categories';
+            title += __('global.categories');
         }
 
-        title += ' - ' + config.title;
+        title += title_suffix;
     }
     else {
-      title += page.title + ' - ' + config.title;
+      title += page.title + title_suffix;
     }
 %>
 <!--
@@ -72,7 +73,6 @@ You know, rather than reading the source like a chump, you can see it all on Git
     <meta name="generator" content="<%= config.title %>">
     <title><%= title %></title>
     <meta name="author" content="<%= config.author %>">
-    <meta name="description" content="<%= config.title %>">
     <% if (theme.favicon) { %>
         <link rel="icon" href="<%- url_for(theme.image_dir + '/' + theme.favicon) %>">
     <% } %>
