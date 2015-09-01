@@ -31,33 +31,33 @@ sidebar:
             title: global.home
             url: /
             icon: home
-        categories:
-            title: global.categories
-            url: /all-categories
-            icon: bookmark
-        tags:
-            title: global.tags
-            url: /all-tags
-            icon: tags
+        #categories:
+        #    title: global.categories
+        #    url: /all-categories
+        #    icon: bookmark
         archives:
             title: global.archives
             url: /all-archives
             icon: archive
-        search:
-            title: global.search
-            url: /#search
-            icon: search
+        tags:
+            title: global.tags
+            url: /all-tags
+            icon: tags
+        #search:
+        #    title: global.search
+        #    url: /#search
+        #    icon: search
             # `st-search-show-outputs` classes are used to open swiftype search window
-            class: st-search-show-outputs
+        #    class: st-search-show-outputs
         about:
             title: global.about
-            url: /#about
+            url: /about
             icon: question
     author_links:
-        # github:
-        #     title: global.github
-        #     url: https://github.com/
-        #     icon: github
+        github:
+            title: global.github
+            url: https://github.com/h404bi
+            icon: github
         # stack_overflow:
         #     title: global.stack_overflow
         #     url: http://stackoverflow.com/users
@@ -82,6 +82,10 @@ sidebar:
         #     title: global.mail
         #     url: mailto:
         #     icon: envelope-o
+        steam:
+            title: Steam
+            url: https://steamcommunity.com/id/h404bi
+            icon: steam
     rss:
         rss:
             title: global.rss
@@ -95,9 +99,9 @@ sidebar:
 # DON'T edit `header`, `right_link`, `url`, `icon` and `class` variable name
 header:
     right_link:
-         # url: /#search
-         # icon: search
-         # class: st-search-show-outputs
+         url: /#search
+         icon: search
+         class: st-search-show-outputs
 
 
 # Author
@@ -122,7 +126,7 @@ author:
 # 2: Display medium sidebar on large and medium screen and header bar on small screen and medium sidebar is swiped (default)
 # 3: Display header bar on all screens and large sidebar is swiped
 # 4: Display header bar on all screens and medium sidebar is swiped
-sidebar_behavior: 2
+sidebar_behavior: 3
 # Hide sidebar on all article page to let article take full width to improve reading, and enjoy wide images and cover images. (true: enable, false: disable)
 clear_reading: true
 # Head title displayed at the top of the table of contents.
@@ -139,7 +143,7 @@ go_to_message: Go to the website
 # Current image is on Cloudinary.
 # Otherwise put your image in folder `source/_images/` (development)  or in `source/assets/images/` if you can't or don't want to build the theme,
 # and use relative url : `/assets/images/your-image.png`
-cover_image: http://res.cloudinary.com/tranquilpeak-hexo-theme/image/upload/v1438975482/v1.3.0-cover.jpg
+cover_image: /assets/images/cover.jpg
 # Your favicon located in folder `source/_images/` (development) or in `source/assets/images/` (production)
 favicon: favicon.ico
 # Display an image gallery at the end of a post which have photos variables (false: disabled, true: enabled)
