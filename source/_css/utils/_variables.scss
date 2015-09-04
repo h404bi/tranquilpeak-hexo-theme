@@ -2,7 +2,13 @@
 // --------------------------------------------
 
 // Typography
-$font-family-base:    'Open Sans', sans-serif;
+$font-family-sans:    "Open Sans", sans-serif;
+$font-family-serif:   "Merriweather", serif;
+$font-family-mono:    Consolas, Monaco, Menlo, Courier, monospace;
+$font-family-chinese: "Microsoft YaHei", "Microsoft JhengHei", "Hiragino Sans GB";
+$font-family-base:    $font-family-sans;
+$font-family-posts:   $font-family-serif;
+
 // equal to 15px
 $font-size-base:      1.5rem;
 $font-color-base:     #5d686f;
@@ -136,7 +142,7 @@ $main: (
 
 // Highlight
 $highlight: (
-    'font-family': Menlo,
+    'font-family': $font-family-mono,
     'font-size':   1.3rem,
     'border':      1px solid #d9d9d9,
     'line-height': 1.2em
