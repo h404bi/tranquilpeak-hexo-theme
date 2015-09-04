@@ -53,7 +53,7 @@
     .postShorten-content {
         font-family: $font-family-posts;
         color:       map-get($colors, base);
-        font-weight: 300;
+        //font-weight: 300;
         overflow:    hidden;
         word-break:  break-word;
         @include prefix('word-break', 'break-all', 'ms moz');

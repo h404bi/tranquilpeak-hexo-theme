@@ -5,14 +5,14 @@
 $font-family-sans:    "Open Sans", sans-serif;
 $font-family-serif:   "Merriweather", serif;
 $font-family-mono:    Consolas, Monaco, Menlo, Courier, monospace;
-$font-family-chinese: "Microsoft YaHei", "Microsoft JhengHei", "Hiragino Sans GB";
-$font-family-base:    $font-family-sans;
-$font-family-posts:   $font-family-serif;
+$font-family-chinese: "SF UI Display", ".PingFang SC","PingFang SC", "Neue Haas Grotesk Text Pro", "Arial Nova", "Segoe UI", "Microsoft YaHei", "Microsoft JhengHei", "Helvetica Neue", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "Hiragino Sans GB";
+$font-family-base:    $font-family-chinese, $font-family-sans;
+$font-family-posts:   $font-family-base;
 
 // equal to 15px
 $font-size-base:      1.5rem;
 $font-color-base:     #5d686f;
-$line-height-base:    1.85em;
+$line-height-base:    2em;
 $letter-spacing-base: 0.01em;
 
 // Reduction of font size base on small screen and down
