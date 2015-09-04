@@ -1,5 +1,5 @@
 # 在所有地方显示的 date 格式化
-date_format: "MMM DD, YYYY"
+date_format: "YYYY-MM-DD"
 
 global:
     home: "首页"
