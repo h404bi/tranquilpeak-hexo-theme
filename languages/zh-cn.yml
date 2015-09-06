@@ -9,6 +9,7 @@ global:
     tag: "标签"
     archives: "归档"
     search: "搜索"
+    links: "邻客"
     about: "关于"
     github: "GitHub"
     stack_overflow: "Stack Overflow"
