@@ -1,3 +1,27 @@
+// Disqus load button
+// --------------------------------------------
+.post-disqus-wrap {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+// Footnotes
+// --------------------------------------------
+hr.footnotes-sep {
+    max-width: 128px;
+    margin-top: 32px;
+}
+
+.footnotes {
+    color: rgba(61, 70, 77, 0.6);
+    font-size: 1.3rem;
+
+    a {
+        color: inherit;
+    }
+}
+
 // Links style
 // from http://xsinger.me
 // --------------------------------------------

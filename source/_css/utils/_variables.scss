@@ -9,8 +9,8 @@ $font-family-chinese: "SF UI Display", ".PingFang SC","PingFang SC", "Neue Haas 
 $font-family-base:    $font-family-chinese, $font-family-sans;
 $font-family-posts:   $font-family-base;
 
-// equal to 15px
-$font-size-base:      1.5rem;
+// equal to 15px => 18px
+$font-size-base:      1.8rem;
 $font-color-base:     #5d686f;
 $line-height-base:    2em;
 $letter-spacing-base: 0.01em;
@@ -22,12 +22,12 @@ $font-size-base-md-screen-reduction-factor: 0.05rem;
 
 // Font size : (X.Xrem = XXpx, 1.0rem = 10px)
 $font-size: (
-    'xlarge': 1.7rem,
-    'large':  1.6rem,
+    'xlarge': 2.2rem,
+    'large':  2rem,
     'base':   $font-size-base,
-    'medium': 1.4rem,
-    'small':  1.25rem,
-    'xsmall': 1rem
+    'medium': 1.6rem,
+    'small':  1.4rem,
+    'xsmall': 1.2rem
 );
 
 // Colors
