@@ -1,3 +1,17 @@
+// Responsive in-post image tag (css override)
+// --------------------------------------------
+@media #{$small-and-down} {
+    .post-content {
+        .figure[class*="fig-"] {
+            width: calc(100% - 4px);
+
+            .fig-img {
+                margin: 2px auto;
+            }
+        }
+    }
+}
+
 // Disqus load button
 // --------------------------------------------
 .post-disqus-wrap {
