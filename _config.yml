@@ -152,7 +152,8 @@ image_gallery: true
 archive_pagination: true
 category_pagination: true
 tag_pagination: true
-
+# Display excerpt link or not
+excerpt_link: false
 
 # Integrated services
 # Your Disqus shortname
